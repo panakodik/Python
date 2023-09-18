@@ -57,3 +57,12 @@ def delete_note(note_id):
 
 if __name__ == "__main__":
     notes = load_notes()
+
+    while True:
+        print("\nВыберите действие:")
+        print("1. Создать заметку")
+        print("2. Список заметок")
+        print("3. Читать заметку")
+        print("4. Редактировать заметку")
+        print("5. Удалить заметку")
+        print("6. Выйти")
