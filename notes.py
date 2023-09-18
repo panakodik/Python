@@ -45,3 +45,15 @@ def edit_note(note_id, new_title, new_body):
             print("Заметка отредактирована успешно!")
             return
     print("Заметка с указанным ID не найдена.")
+
+def delete_note(note_id):
+    for note in notes:
+        if note["id"] == note_id:
+            notes.remove(note)
+            save_notes(notes)
+            print("Заметка удалена успешно!")
+            return
+    print("Заметка с указанным ID не найдена.")
+
+if __name__ == "__main__":
+    notes = load_notes()
